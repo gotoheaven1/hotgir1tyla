@@ -17,10 +17,14 @@
         <canvas id="bubbleCanvas"></canvas>
         <div class="intro-text-box">
             <h1 class="intro-title">TYLA</h1>
+            
+            <div class="intro-quote-box">
+                <p id="intro-quote-text"></p>
+            </div>
+
             <p class="intro-guide">Click bubbles to pop<br>Press [SPACE] to enter</p>
         </div>
     </section>
-
     <main id="main-content" class="hidden">
         <div class="noise-texture"></div>
 
@@ -78,10 +82,61 @@
             </div>
         </section>
 
+        <section class="quote-section">
+            <div class="quote-container">
+                <div class="quote-icon">“</div>
+                
+                <h2 id="quote-text" class="fade-in">Make me sweat, make me hotter</h2>
+                <p id="quote-source" class="fade-in">- Water -</p>
+                
+                <div class="quote-icon right">”</div>
+                
+                <button id="shuffle-btn" class="custom-btn hover-effect">SHUFFLE MOOD</button>
+            </div>
+        </section>
+
+        <section class="sand-time-section">
+            <div class="sand-container">
+                <div class="hourglass-icon">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                        <path d="M6 2L18 2M6 22L18 22M12 12L7 2H17L12 12ZM12 12L7 22H17L12 12Z" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                </div>
+
+                <div class="time-content">
+                    <h3 class="time-title">THE SAND OF TIME</h3>
+                    <p class="time-subtitle">Countdown to Tyla's Birthday (Jan 30)</p>
+                    
+                    <div id="countdown-timer">
+                        <div class="time-unit">
+                            <span id="days">00</span>
+                            <span class="label">DAYS</span>
+                        </div>
+                        <div class="separator">:</div>
+                        <div class="time-unit">
+                            <span id="hours">00</span>
+                            <span class="label">HRS</span>
+                        </div>
+                        <div class="separator">:</div>
+                        <div class="time-unit">
+                            <span id="minutes">00</span>
+                            <span class="label">MIN</span>
+                        </div>
+                        <div class="separator">:</div>
+                        <div class="time-unit">
+                            <span id="seconds">00</span>
+                            <span class="label">SEC</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
         <footer>
             <p>DESIGNED FOR TYLA. INSPIRED BY CHANEL.</p>
             <p class="copyright">© 2024 FAN PORTFOLIO</p>
         </footer>
+      
     </main>
 
     <script src="script.js"></script>
