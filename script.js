@@ -295,3 +295,28 @@ function updateCountdown() {
 // 1초마다 업데이트
 setInterval(updateCountdown, 1000);
 updateCountdown(); // 로드 되자마자 즉시 실행
+/* =========================================
+   [WATER RIPPLE EFFECT SCRIPT]
+   ========================================= */
+document.addEventListener('click', function(e) {
+    // 1. 물결 요소 생성
+    const ripple = document.createElement('div');
+    ripple.classList.add('ripple');
+    
+    // 2. 크기 설정 (랜덤하게)
+    const size = Math.random() * 50 + 50; // 50px ~ 100px
+    ripple.style.width = `${size}px`;
+    ripple.style.height = `${size}px`;
+    
+    // 3. 위치 설정 (마우스 클릭 지점 중심)
+    ripple.style.left = `${e.clientX - size/2}px`;
+    ripple.style.top = `${e.clientY - size/2}px`;
+    
+    // 4. 화면에 추가
+    document.body.appendChild(ripple);
+    
+    // 5. 애니메이션 끝나면 삭제 (메모리 관리)
+    setTimeout(() => {
+        ripple.remove();
+    }, 800); // CSS 애니메이션 시간과 동일하게
+});
